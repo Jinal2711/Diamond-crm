@@ -1,0 +1,99 @@
+.navbar {
+  border: none;
+  background: transparent;
+  transition: all 0.5s ease;
+  padding: 2rem;
+}
+
+.card {
+  box-shadow: 0px 0px 17px 10px #ccc;
+  height: 350px;
+  overflow: hidden;
+  border: none;
+  transition: 0.5s all ease-in-out, transform 0.5s;
+  opacity: 0.8;
+  position: relative;
+}
+
+.card:hover {
+  box-shadow: 0px 0px 17px 8px #ccc;
+  transform: rotate(20deg);
+  transition: all 0.5s ease-in-out;
+  opacity: 1;
+}
+
+.card::after {
+  content: '';
+  background: linear-gradient(to right, rgb(75, 108, 183), rgb(24, 40, 72));
+  height: 5px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: width ease-in-out 0.5s;
+  transform: scaleX(0)
+}
+
+.card:hover::after {
+  transform: scaleX(1);
+  transition: transform ease-in-out 0.5s;
+}
+
+.cardRow {
+  padding: 20px;
+}
+
+.swiperImg {
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.linkName {
+  color: white;
+  text-shadow: 0px 1px 4px rba(0, 0, 0, 0.5);
+  opacity: 1;
+  transition: all 0.5s ease;
+}
+
+.carddiv {
+  height: 400px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.navbar.active {
+  background: linear-gradient(to right, rgb(20, 30, 48), rgb(36, 59, 85));
+  transition: all 0.5s ease;
+  padding: 1rem;
+}
+
+.navbar.active .linkName {
+  color: white;
+  transition: all 0.5s ease;
+}
+
+.card_animation .card {
+  animation: card_animation 1s ease forwards;
+}
+
+@keyframes card_animation {
+  0% {
+    opacity: 0;
+    transform: scale(0.7)
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1)
+  }
+}
+
+.tag_1 {
+  font-family: 'Times New Roman', Times, serif;
+  text-align: center;
+  animation-delay: 0.2s
+}
